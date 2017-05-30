@@ -1,0 +1,42 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+    
+}
+
+td{
+    border: 1px solid #aa0bcc;
+    text-align: left;
+    padding: 8px;
+    color: fuchsia;
+    
+}
+
+th {
+    border: 1px solid #aa0bcc;
+    text-align: left;
+    padding: 8px;
+    color: black;
+    
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+    
+}
+
+.imagenjumbo{
+    margin: 0 auto;
+    width: 100%;
+    height: 420px;
+    z-index: -1;
+}
+
+h1{
+    text-align: center;
+    color: #aa0bcc;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 80px;
+}
