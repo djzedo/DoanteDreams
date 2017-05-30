@@ -21,8 +21,11 @@
     <body>
         {!! HTML::image('img/tuProyecto.jpg' , 'Tu Proyecto', ['class' => 'imagenjumbo']) !!}
         
-        <h1>Donate Donors</h1>
-        
+        <h1>Donate Dreams</h1>
+        @if(Auth::check())
+        Bienvenido: {!!Auth::user()->username!!}. ( {!! Html::link('logout', 'Salir') !!} )
+        ({!! Html::link('users/', 'perfil') !!})
+    @endif
         
         {!! Form::open(['url' => 'Agregar']) !!}
             

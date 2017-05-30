@@ -1,70 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.master')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
+@section('title')
+    Donate Dreams - Login Page
+@stop
+        
+    
+@section('content')
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -79,17 +20,35 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 5 for OS X
+                    Donate <span style= color:chartreuse;>Dreams</span>
                 </div>
+                
+                <img src="/public/img/DonateDream.png" alt="Donate Dreams Logo" />
+                
+                <div class="login">
+                    <br><br><br>
+    
+                    <h1><span style="font-family: 'Open Sans', sans-serif;">Login</span></h1>
+                    {!! Form::open(['url' => 'login']) !!}
+                    <p>
+                        {!! Form::label('') !!}
+                        {!! Form::text('username', null, ['placeholder' => 'tu usuario']) !!}
+                    
+                        {!! Form::label('') !!}
+                        {!! Form::password('password', ['placeholder' => 'tu contraseña']) !!}
+                    
+                        {!! Form::submit('Déjame Entrar!', array('class' => 'btn btn-primary btn-block btn-large')) !!}
+                    </p>
 
+                    {!! Form::close() !!}
+                </div>
+                    
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+@stop
