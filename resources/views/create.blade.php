@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Login
+    Registrarse
 
 @section('content')
     {!! Form::open(['url' => 'login' ]) !!}

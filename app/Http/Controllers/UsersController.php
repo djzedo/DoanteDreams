@@ -11,8 +11,8 @@ class UsersController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('filters', ['only' => ['show', 'edit', 'update', 'destroy']]);
-        $this->middleware('autorizado', ['only' => ['edit', 'update', 'destroy']]);
+        $this->middleware('filters', ['only' => ['show', 'edit', 'update', 'destroy','create']]);
+        $this->middleware('autorizado', ['only' => ['edit', 'update', 'destroy','create']]);
         $this->middleware('admin', ['only' => ['create']]);
     }
     /**

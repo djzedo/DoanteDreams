@@ -33,7 +33,7 @@
             {!! Form::submit('Crea Tu Proyecto!') !!}
         {!! Form::close() !!}
         
-        <table border="true">
+        <table border="true" class="table">
             <tr>
                 <th>Nombre Proyecto</th>
                 <th>Cantidad</th>
@@ -56,6 +56,8 @@
         @endforeach
             
         </table>
+        
+        
         
     <div class="alert alert-danger" role="alert" style="display:{{$display}}">
     <strong>Oh Lo Sentimos!</strong> El nombre del proyecto que escogiste ya existe, por favor intentalo de nuevo.

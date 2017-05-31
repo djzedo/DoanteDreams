@@ -14,12 +14,12 @@ class HomeController extends Controller
    
     public function getIndex()
     {
-         return view('welcome');
+         return view('login');
     }
     
     public function getLogin()
     {
-        return view('welcome');
+        return view('login');
         
     }
     
