@@ -8,6 +8,8 @@
         <title>Donar</title>
         
         <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
         
         <!-- Styles -->
         
@@ -65,7 +67,12 @@
                                             Pagar con Paypal
                                         </button>
                                     </div>
-                                </div>
+									<form class="form-horizontal" method="GET" id="back-form" role="form" action="/" >
+										<button type="submit" class="btn btn-primary">
+												Regresar
+											</button>
+									</form>
+                                </div>									
                             </form>
                         </div>
                     </div>

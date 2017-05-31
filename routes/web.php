@@ -48,6 +48,10 @@ Route::post('Donar',function(){
 fin Donar Sin PayPal
 */
 
+Route::get ('detail',[
+	'uses' => 'DetailController@detailProject'
+]);
+
 Route::get('paywithpaypal', array('as' => 'addmoney.paywithpaypal','uses' => 'AddMoneyController@payWithPaypal',));
 
 Route::post('paypal', array('as' => 'addmoney.paypal','uses' => 'AddMoneyController@postPaymentWithpaypal',));

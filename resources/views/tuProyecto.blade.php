@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,32 +6,29 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>DonateDreams</title>
-    
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
+        <title>DonateDreams</title>     
+		
+		<!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">		
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="img/favicon.ico" type="image/x-icon">
         
-        <!-- Styles -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        
-        {!! Html::style('css/tuProyecto.css') !!}
-        <style>
-            
-        </style>
+		{!! Html::style('css/tuProyecto.css') !!}
+        <style></style>
     </head>
     <body>
-        {!! HTML::image('img/tuProyecto.jpg' , 'Tu Proyecto', ['class' => 'imagenjumbo']) !!}
+		{!! HTML::image('img/tuProyecto.jpg' , 'Tu Proyecto', ['class' => 'imagenjumbo']) !!}
         
-        <h1>Donate Donors</h1>
+        <div class="title m-b-md"><h1>Donate Dreams</h1></div>
         
         
-        {!! Form::open(['url' => 'Agregar']) !!}
-            
+        {!! Form::open(['url' => 'Agregar']) !!}            
             {!! Form::text('nombre',null,['placeholder'=>'Nombre del Proyecto']) !!}
             {!! Form::submit('Crea Tu Proyecto!') !!}
         {!! Form::close() !!}
         
-        <table border="true">
+		<br>
+        <table border="true" class="table">
             <tr>
                 <th>Nombre Proyecto</th>
                 <th>Cantidad</th>
@@ -39,11 +37,11 @@
            
         @foreach($proyectos as $proyecto)
              <tr>
-                <td> {!! $proyecto->nombre !!} </td> 
+				<td><a href="<?php echo url('detail') ?>">{!! $proyecto->nombre !!}
+				</a> </td>
                 <td> ($ {!! $proyecto->cantidad !!}) </td> 
                 <td> {!! Form::open(['url'=>'paywithpaypal', 'method'=>'get']) !!} 
                         {!! Form::hidden('id', $proyecto->id) !!}
-                        <!-- {!! Form::selectRange('Donacion',1,20) !!} -->
                         {!! Form::submit('Donar!') !!}
                      {!! Form::close() !!}
                  </td>
