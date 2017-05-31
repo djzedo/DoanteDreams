@@ -38,7 +38,7 @@ class HomeController extends Controller
             
             //\Session::put('proyecto', $proyectos);
             //\Session::put('display', $display);
-            return view('tuProyecto')->with('proyectos',$proyectos)->with('display',$display);;
+            return view('tuProyecto')->with('proyectos',$proyectos)->with('display',$display);
         }
         else
         {

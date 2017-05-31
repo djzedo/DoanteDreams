@@ -23,7 +23,6 @@
                     Donate <span style= color:chartreuse;>Dreams</span>
                 </div>
                 
-                <img src="/public/img/DonateDream.png" alt="Donate Dreams Logo" />
                 
                 <div class="login">
                     <br><br><br>

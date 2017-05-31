@@ -64,6 +64,7 @@ html, body {
 
             .title {
                 font-size: 84px;
+                align-content: center
             }
 
             .links > a {
