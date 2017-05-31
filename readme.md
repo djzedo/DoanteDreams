@@ -36,7 +36,7 @@
 
 <p>Se usa como lenguaje de programación PHP.</p>
 <p>Framework: Laravel 5.4</p>
-<p>Persistencia: RDB MySQL</p>
+<p>Persistencia: Clear DB (Hosteado)</p>
 <p>HTTP Server: Apache</p>
 
 
