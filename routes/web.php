@@ -24,7 +24,7 @@ Route::get('tuProyecto', function () {
 
 Route::post('Agregar', function(){
     $name = Input::get('nombre');
-    $display;
+    
     if($name) {
     
         if(DB::table('projects')->whereNombre($name)->first() !== null){
@@ -32,12 +32,17 @@ Route::post('Agregar', function(){
             return 'Poyecto ya existe';
         
         }else{ 
+            
+            $display = 'none';
             DB::table('projects')->insert(['nombre'=>$name]);
-            return Redirect::to('/');
+            $proyectos = DB::table('projects')->get();
+            return view('tuProyecto')->with('proyectos',$proyectos)->with('display',$display);
+            //return Redirect::to('tuProyecto');
         }
     }else{
-        //return 'Proyecto debe tener un nombre';
-         return Redirect::to('/')->withDisplay('block');
+        return 'Proyecto debe tener un nombre';
+        //return view('tuProyecto')->with('proyectos',$proyectos)->with('display',$display);
+         //return Redirect::to('/')->withDisplay('block');
     }
 });
 

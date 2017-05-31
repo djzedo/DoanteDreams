@@ -35,10 +35,8 @@ class HomeController extends Controller
         {
             $display = 'none';
             $proyectos = \DB::table('projects')->get();
-            
-            //\Session::put('proyecto', $proyectos);
-            //\Session::put('display', $display);
             return view('tuProyecto')->with('proyectos',$proyectos)->with('display',$display);
+            return redirect::intended('tuProyecto');
         }
         else
         {

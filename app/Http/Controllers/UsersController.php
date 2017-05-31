@@ -11,8 +11,8 @@ class UsersController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('filters', ['only' => ['show', 'edit', 'update', 'destroy','create']]);
-        $this->middleware('autorizado', ['only' => ['edit', 'update', 'destroy','create']]);
+        $this->middleware('filters', ['only' => ['show', 'edit', 'update', 'destroy']]);
+        $this->middleware('autorizado', ['only' => ['edit', 'update', 'destroy']]);
         $this->middleware('admin', ['only' => ['create']]);
     }
     /**
@@ -83,6 +83,7 @@ class UsersController extends Controller
         $user = User::find($id);
         $owner = (Auth::id() == (int) $id);
         return view('profile')->withUser($user)->withOwner($owner);
+        
         
     }
     
