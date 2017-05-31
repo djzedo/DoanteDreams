@@ -41,22 +41,9 @@ Route::post('Agregar', function(){
         }
     }else{
         return 'Proyecto debe tener un nombre';
-        //return view('tuProyecto')->with('proyectos',$proyectos)->with('display',$display);
-         //return Redirect::to('/')->withDisplay('block');
+       
     }
 });
-
-
-/* Donar sin PayPal
-Route::post('Donar',function(){
-    $donacion = Input::get('Donacion');
-    $id = Input::get('id');
-    
-    DB::table('projects')->where('id',$id)->increment('cantidad', $donacion);
-        return Redirect::to('/');
-});
-fin Donar Sin PayPal
-*/
 
 Route::get('paywithpaypal', array('as' => 'addmoney.paywithpaypal','uses' => 'AddMoneyController@payWithPaypal',));
 

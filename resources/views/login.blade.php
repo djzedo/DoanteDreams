@@ -6,7 +6,7 @@
         
     
 @section('content')
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height" style="background-image: url("img/fondo.jpg")">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -20,7 +20,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Donate <span style= color:chartreuse;>Dreams</span>
+                    <strong>Donate Dreams</strong>
                 </div>
                 
                 
@@ -43,7 +43,7 @@
                 </div>
                     
                 <div class="links">
-                    <a href="https://youtube.com">VideoDemo</a>
+                    <a href=" https://youtu.be/bdBDApNJsZY">VideoDemo</a>
                     <a href="https://github.com/djzedo/DoanteDreams">GitHub</a>
                 </div>
             </div>
