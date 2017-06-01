@@ -10,10 +10,10 @@ use Validator, Redirect, Hash, Auth;
 class UsersController extends Controller
 {
     public function __construct()
-    {
+    {/*
         $this->middleware('filters', ['only' => ['show', 'edit', 'update', 'destroy']]);
         $this->middleware('autorizado', ['only' => ['edit', 'update', 'destroy']]);
-        $this->middleware('admin', ['only' => ['create']]);
+        $this->middleware('admin', ['only' => ['create']]);*/
     }
     /**
      * Display a listing of the resource.
@@ -65,6 +65,7 @@ class UsersController extends Controller
                 ([
                     'username' => Request::get('username'),
                     'password' => Hash::make(Request::get('password')),
+                    'email' => Request::get('email'),
                     'admin' => Request::get('isAdmin')
                     
                 ]);

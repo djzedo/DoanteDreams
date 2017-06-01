@@ -16,4 +16,9 @@
     @foreach($users as $user)
         <p>{!! $user->username !!} ({!! Html::link('users/'.$user->id, 'perfil') !!})</p> 
     @endforeach
+
+     {!! Form::open(['url' => '/login']) !!}
+        <p>{!! Form::submit('volver al inicio', array('class' => 'btn btn-primary btn-block btn-large')) !!}</p>
+
+    {!! Form::close() !!}
 @stop

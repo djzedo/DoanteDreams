@@ -41,6 +41,13 @@
 
                     {!! Form::close() !!}
                 </div>
+                
+                <p>No eres usuario?</p>
+                {!! Form::open(['url' => '/users']) !!}
+                 {!! Form::submit('Registrate!', array('class' => 'btn btn-primary btn-block btn-large')) !!}
+                    </p>
+
+                    {!! Form::close() !!}
                     
                 <div class="links">
                     <a href=" https://youtu.be/bdBDApNJsZY">VideoDemo</a>
